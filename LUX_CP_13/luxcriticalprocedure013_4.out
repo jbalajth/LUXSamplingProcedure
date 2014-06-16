@@ -1,0 +1,41 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Purpose}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Prerequisites}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Skills and Training}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Permits and Authorizations}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{Equipment}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.4}{Hazard Mitigation}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.5}{Lessons Learned}{section.2}% 8
+\BOOKMARK [1][-]{section.3}{Filling the Sampling System's Dewar in the Lower Davis}{}% 9
+\BOOKMARK [1][-]{section.4}{Using the Automated Sampling System}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Collecting a Xenon Sample from the Circulation System}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Collecting a Xenon Sample from the Calibration-Xenon Bottle}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.3}{Collecting a Xenon Sample from the Xenon Storage Bottles}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.4}{Collecting a Xenon Sample from the SRV \(when warm\)}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.5}{Recovering Sampled Xenon to the SRV}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{Manual Sampling and Analysis}{}% 16
+\BOOKMARK [2][-]{subsection.5.1}{Manually Collecting a Xenon Sample from the Circulation System}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.2}{Collecting a Xenon Sample from the Calibration-Xenon Bottle}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.3}{Manual Purity Analysis}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{Debugging Sampling System Errors}{}% 20
+\BOOKMARK [2][-]{subsection.6.1}{ Poor Vacuum}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.2}{ Xenon is too dirty}{section.6}% 22
+\BOOKMARK [2][-]{subsection.6.3}{ Input Pressure Did Not Decline}{section.6}% 23
+\BOOKMARK [2][-]{subsection.6.4}{ Valve Failure}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.5}{ Low Sample Pressure}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.6}{Low LN}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.7}{PumpOutErr}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.8}{NetErr}{section.6}% 28
+\BOOKMARK [1][-]{appendix.A}{Sampling System Logic}{}% 29
+\BOOKMARK [2][-]{subsection.A.1}{Sampling System Control: Error}{appendix.A}% 30
+\BOOKMARK [2][-]{subsection.A.2}{ Sampling System Control: Idle}{appendix.A}% 31
+\BOOKMARK [2][-]{subsection.A.3}{ Sampling System Control: PreSample}{appendix.A}% 32
+\BOOKMARK [2][-]{subsection.A.4}{Sampling System Control: Analyze\046Dump/Analyze\046Recover/Calibrate}{appendix.A}% 33
+\BOOKMARK [2][-]{subsection.A.5}{ Sampling System Control: Pump Out}{appendix.A}% 34
+\BOOKMARK [1][-]{appendix.B}{Collecting a Xenon Sample From the LUX System with a 0.5 L Sampling Bottle}{}% 35
+\BOOKMARK [1][-]{appendix.C}{How to Analyze the Data}{}% 36
+\BOOKMARK [2][-]{subsection.C.1}{Overview}{appendix.C}% 37
+\BOOKMARK [2][-]{subsection.C.2}{Measuring the dynamic leak rate}{appendix.C}% 38
+\BOOKMARK [2][-]{subsection.C.3}{Accounting for the dynamic leak rate}{appendix.C}% 39
+\BOOKMARK [2][-]{subsection.C.4}{Peak pressure method}{appendix.C}% 40
+\BOOKMARK [1][-]{appendix.D}{Figures}{}% 41
