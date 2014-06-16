@@ -9,10 +9,10 @@
 \contentsline {section}{\numberline {3}Filling the Sampling System's Dewar in the Lower Davis}{7}{section.3}
 \contentsline {section}{\numberline {4}Using the Automated Sampling System}{9}{section.4}
 \contentsline {subsection}{\numberline {4.1}Manually collecting a Xenon Sample from Circulation System}{12}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Collecting a Xenon Sample from the Calibration-Xenon Bottle}{13}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Collecting a Xenon Sample from the Xenon Storage Bottles}{13}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Collecting a Xenon Sample from the SRV (when warm)}{16}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Recovering Sampled Xenon to the SRV}{18}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.2}Collecting a Xenon Sample from the Xenon Storage Bottles}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Collecting a Xenon Sample from the SRV (when warm)}{16}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Collecting a Xenon Sample from the Calibration-Xenon Bottle}{17}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Recovering Sampled Xenon to the SRV (when not sampling from bottles)}{18}{subsection.4.5}
 \contentsline {subsection}{\numberline {4.6}Recovering Sampled Xenon to the SRV when Sampling From the Xenon Storage Bottles}{19}{subsection.4.6}
 \contentsline {section}{\numberline {5}Understanding SAM Status Readouts}{20}{section.5}
 \contentsline {subsection}{\numberline {5.1}Idle:Idle}{20}{subsection.5.1}

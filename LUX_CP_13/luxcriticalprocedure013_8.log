@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  16 JUN 2014 10:31
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  16 JUN 2014 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -361,110 +361,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--274
 []|\OT1/cmr/m/n/10 Operation
  []
 
-[9] [10] [11] [12]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13] [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 619--619
+[9] [10] [11] [12] [13] [14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 617--617
 []|\OT1/cmr/m/n/10 Hazard
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 658--658
+Underfull \hbox (badness 10000) in paragraph at lines 656--656
 []|\OT1/cmr/m/n/10 Hazard
  []
 
 [19] [20]
 
 LaTeX Warning: Reference `sec:ManualDraw' on page 21 undefined on input line 71
-6.
+4.
 
 
-LaTeX Warning: Reference `sec:PreSample' on page 21 undefined on input line 719
+LaTeX Warning: Reference `sec:PreSample' on page 21 undefined on input line 717
 .
 
 [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32]
-<SamplingLocations.png, id=866, 732.7375pt x 336.25626pt>
+<SamplingLocations.png, id=867, 732.7375pt x 336.25626pt>
 File: SamplingLocations.png Graphic file (type png)
 
 <use SamplingLocations.png>
-Package pdftex.def Info: SamplingLocations.png used on input line 1092.
+Package pdftex.def Info: SamplingLocations.png used on input line 1090.
 (pdftex.def)             Requested size: 426.79134pt x 195.85995pt.
 
-<SAM_Diagram_2.pdf, id=867, 898.35625pt x 835.12pt>
+<SAM_Diagram_2.pdf, id=868, 898.35625pt x 835.12pt>
 File: SAM_Diagram_2.pdf Graphic file (type pdf)
  <use SAM_Diagram_2.pdf>
-Package pdftex.def Info: SAM_Diagram_2.pdf used on input line 1098.
+Package pdftex.def Info: SAM_Diagram_2.pdf used on input line 1096.
 (pdftex.def)             Requested size: 426.79134pt x 396.74983pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<SAM_CTRL_2.pdf, id=868, 589.0169pt x 209.639pt>
+<SAM_CTRL_2.pdf, id=869, 589.0169pt x 209.639pt>
 File: SAM_CTRL_2.pdf Graphic file (type pdf)
  <use SAM_CTRL_2.pdf>
-Package pdftex.def Info: SAM_CTRL_2.pdf used on input line 1104.
+Package pdftex.def Info: SAM_CTRL_2.pdf used on input line 1102.
 (pdftex.def)             Requested size: 512.1496pt x 182.2853pt.
 
-<SAM_Status_2.pdf, id=869, 589.03424pt x 233.95605pt>
+<SAM_Status_2.pdf, id=870, 589.03424pt x 233.95605pt>
 File: SAM_Status_2.pdf Graphic file (type pdf)
  <use SAM_Status_2.pdf>
-Package pdftex.def Info: SAM_Status_2.pdf used on input line 1105.
+Package pdftex.def Info: SAM_Status_2.pdf used on input line 1103.
 (pdftex.def)             Requested size: 512.1496pt x 203.42944pt.
 
-Overfull \hbox (40.67711pt too wide) in paragraph at lines 1104--1106
+Overfull \hbox (40.67711pt too wide) in paragraph at lines 1102--1104
  [][] 
  []
 
 
-Overfull \hbox (40.67711pt too wide) in paragraph at lines 1104--1106
+Overfull \hbox (40.67711pt too wide) in paragraph at lines 1102--1104
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<SAM.png, id=870, 459.7175pt x 609.27625pt>
+<SAM.png, id=871, 459.7175pt x 609.27625pt>
 File: SAM.png Graphic file (type png)
  <use SAM.png>
-Package pdftex.def Info: SAM.png used on input line 1111.
+Package pdftex.def Info: SAM.png used on input line 1109.
 (pdftex.def)             Requested size: 284.52756pt x 377.11517pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Min_Fill.pdf, id=871, 614.295pt x 794.97pt>
+<Min_Fill.pdf, id=872, 614.295pt x 794.97pt>
 File: Min_Fill.pdf Graphic file (type pdf)
  <use Min_Fill.pdf>
-Package pdftex.def Info: Min_Fill.pdf used on input line 1117.
+Package pdftex.def Info: Min_Fill.pdf used on input line 1115.
 (pdftex.def)             Requested size: 312.9803pt x 405.04117pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<SRV_LN_BOX.pdf, id=872, 614.295pt x 794.97pt>
+<SRV_LN_BOX.pdf, id=873, 614.295pt x 794.97pt>
 File: SRV_LN_BOX.pdf Graphic file (type pdf)
  <use SRV_LN_BOX.pdf>
-Package pdftex.def Info: SRV_LN_BOX.pdf used on input line 1124.
+Package pdftex.def Info: SRV_LN_BOX.pdf used on input line 1122.
 (pdftex.def)             Requested size: 284.52756pt x 368.21373pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<SAM_Turbo_Cart.pdf, id=873, 939.51pt x 572.1375pt>
+<SAM_Turbo_Cart.pdf, id=874, 939.51pt x 572.1375pt>
 File: SAM_Turbo_Cart.pdf Graphic file (type pdf)
  <use SAM_Turbo_Cart.pdf>
-Package pdftex.def Info: SAM_Turbo_Cart.pdf used on input line 1131.
+Package pdftex.def Info: SAM_Turbo_Cart.pdf used on input line 1129.
 (pdftex.def)             Requested size: 369.88582pt x 225.2454pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<11.pdf, id=874, 794.97pt x 614.295pt>
+<11.pdf, id=875, 794.97pt x 614.295pt>
 File: 11.pdf Graphic file (type pdf)
  <use 11.pdf>
-Package pdftex.def Info: 11.pdf used on input line 1138.
+Package pdftex.def Info: 11.pdf used on input line 1136.
 (pdftex.def)             Requested size: 426.79134pt x 329.80219pt.
 
 
@@ -472,39 +468,39 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: 11.pdf Graphic file (type pdf)
 <use 11.pdf>
-Package pdftex.def Info: 11.pdf used on input line 1144.
+Package pdftex.def Info: 11.pdf used on input line 1142.
 (pdftex.def)             Requested size: 227.62204pt x 175.89137pt.
- <22.pdf, id=875, 794.97pt x 614.295pt>
+ <22.pdf, id=876, 794.97pt x 614.295pt>
 File: 22.pdf Graphic file (type pdf)
  <use 22.pdf>
-Package pdftex.def Info: 22.pdf used on input line 1145.
+Package pdftex.def Info: 22.pdf used on input line 1143.
 (pdftex.def)             Requested size: 227.62204pt x 175.89137pt.
 
-<33.pdf, id=876, 794.97pt x 614.295pt>
+<33.pdf, id=877, 794.97pt x 614.295pt>
 File: 33.pdf Graphic file (type pdf)
  <use 33.pdf>
-Package pdftex.def Info: 33.pdf used on input line 1146.
+Package pdftex.def Info: 33.pdf used on input line 1144.
 (pdftex.def)             Requested size: 227.62204pt x 175.89137pt.
 
-<44.pdf, id=877, 794.97pt x 614.295pt>
+<44.pdf, id=878, 794.97pt x 614.295pt>
 File: 44.pdf Graphic file (type pdf)
  <use 44.pdf>
-Package pdftex.def Info: 44.pdf used on input line 1147.
+Package pdftex.def Info: 44.pdf used on input line 1145.
 (pdftex.def)             Requested size: 227.62204pt x 175.89137pt.
 
-<55.pdf, id=878, 794.97pt x 614.295pt>
+<55.pdf, id=879, 794.97pt x 614.295pt>
 File: 55.pdf Graphic file (type pdf)
  <use 55.pdf>
-Package pdftex.def Info: 55.pdf used on input line 1148.
+Package pdftex.def Info: 55.pdf used on input line 1146.
 (pdftex.def)             Requested size: 227.62204pt x 175.89137pt.
 
 
-LaTeX Warning: Float too large for page by 25.67412pt on input line 1151.
+LaTeX Warning: Float too large for page by 25.67412pt on input line 1149.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1156.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1154.
 [33 <./SamplingLocations.png>] [34 <./SAM_Diagram_2.pdf>] [35 <./SAM_CTRL_2.pdf
 > <./SAM_Status_2.pdf>] [36 <./SAM.png>] [37 <./Min_Fill.pdf>] [38 <./SRV_LN_BO
 X.pdf>] [39 <./SAM_Turbo_Cart.pdf>] [40 <./11.pdf>] [41 <./22.pdf> <./33.pdf
@@ -520,14 +516,14 @@ dfs with page group included in a single page
 pdfTeX warning: /usr/texbin/pdflatex (file ./55.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
 >]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1156.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1154.
  (./luxcriticalprocedure013_8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1156.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1156.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1154.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1154.
 
 Package rerunfilecheck Info: File `luxcriticalprocedure013_8.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 288FD267A8B3326C7D14A231D0E7749C;4029.
+(rerunfilecheck)             Checksum: 4326FD5444DAFAF539155D71B005D5A3;4064.
 
 
 LaTeX Warning: There were undefined references.
@@ -535,25 +531,26 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1156.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1154.
  ) 
 Here is how much of TeX's memory you used:
  5880 strings out of 493488
  84504 string characters out of 3141326
- 171590 words of memory out of 3000000
+ 171762 words of memory out of 3000000
  8692 multiletter control sequences out of 15000+200000
  6723 words of font info for 27 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 29i,11n,28p,2015b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,11n,28p,2015b,407s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on luxcriticalprocedure013_8.pdf (41 pages, 10256119 bytes).
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
+Output written on luxcriticalprocedure013_8.pdf (41 pages, 10264009 bytes).
 PDF statistics:
- 1305 PDF objects out of 1440 (max. 8388607)
- 1183 compressed objects within 12 object streams
+ 1309 PDF objects out of 1440 (max. 8388607)
+ 1186 compressed objects within 12 object streams
  440 named destinations out of 1000 (max. 500000)
  498 words of extra memory for PDF output out of 10000 (max. 10000000)
 

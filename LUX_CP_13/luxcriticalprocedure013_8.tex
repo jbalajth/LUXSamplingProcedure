@@ -275,36 +275,48 @@ Cryogen and pressure hazards mitigated as noted in Section 2.4. A cryogen is use
 The coldtrap is a cryopump vessel which could potentially accumulate an amount of xenon which could overpressure when the xenon ice warms up. A burst disk set to 41.1 psig will relieve a overpressure in the coldtrap system plumbing.
 \end{risk}
 
-This section describes the process of sampling and analyzing xenon from the LUX circulation xenon system with the sampling system. Because the sampling procedure is largely the same for each of the locations, we will henceforth refer to the valves in each sampling location as VC\&VB (valve on the circulation side) and VA (the valve on the sampling system side).  Additionally, we will refer to the pressure transducer nearest the sampling port as PT-A.  The valves and pressure transducer corresponding to each sampling location are summarized in Table \ref{Table1}.
-
-This section is to be followed regardless of which port was selected. This procedure is for sampling xenon from the LUX gas system, the SRV, the Xe storage bottles, and for calibrating the sampling system. A 0.5 L sampling volume will be filled with xenon from the selected port and for calibrating from the internal calibration bottle. The valves and pressure transducer corresponding to each sampling location are summarized in Table \ref{Table1}, along with whether additional steps are required to collect the sample. See Figure \ref{fig:ports} and Figure \ref{fig:pid} for diagrams of the coldtrap plumbing and sampling port locations. Once PreSample has been initiated by the user, the sampling system logic will perform a brief internal pump-out prior to attempting an automated sample draw. After this, the user will make sure a sample has been properly collected and then begin the analysis. When the analysis is completed, the xenon ice in the coldtrap will warm and vaporize; the user can choose to vent this xenon or to recover it to the SRV. The analysis will be performed automatically, purity values will appear in the slow control database, and the user will need to record these and several other quantities in the LUG.
-
 \begin{table}[h!]
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
-Sample Location & Pneumatics & Section & VA & VB & VC & Pressure to Watch \\ \hline
-Getter Input & Yes & n/a & CV37 & CV34 & CV35 & PT-C15 \\ \hline
-Getter Output & Yes & n/a & CV76 & CV74  & n/a & PT-C20\\ \hline
-Detector Return & Yes & n/a & CV11 & CV8 & n/a & PT-C1 \\ \hline
-PMT Purge Line & Yes & n/a & CV9 & CV7 & n/a & PT-D41, PT-D4\\ \hline
-Recirc Pump Inlet & No & \ref{sec:manualdraw} & CV60 & CV61 & n/a & PT-C15 \\ \hline
-To SRV & No & \ref{sec:SRV} & CV90 & CV89 & n/a & PT-S10\\ \hline
-Storage Bottles & No & \ref{sec:bottles} & CV90 & CV89 & n/a & PT-S10\\ \hline
-Calibration Bottle & No & \ref{sec:calibrate} & SAM\_V14 & SAM\_V13 & n/a & n/a\\ \hline  
-
+Sample Location & Sam. Draw Instructions & VA & VB & VC & Pressure to Watch \\ \hline
+Getter Input  & none & CV37 & CV34 & CV35 & PT-C15 \\ \hline
+Getter Output & none & CV76 & CV74  & n/a & PT-C20\\ \hline
+Detector Return & none & CV11 & CV8 & n/a & PT-C1 \\ \hline
+PMT Purge Line & none & CV9 & CV7 & n/a & PT-D41, PT-D4\\ \hline
+Recirc Pump Inlet & \ref{sec:manualdraw} & CV60 & CV61 & n/a & PT-C15 \\ \hline
+Storage Bottles & \ref{sec:bottles} & CV90 & CV89 & n/a & PT-S10\\ \hline
+To SRV & \ref{sec:SRV} & CV90 & CV89 & n/a & PT-S10\\ \hline
+Calibration Bottle & \ref{sec:calibrate} & SAM\_V14 & SAM\_V13 & n/a & n/a\\ \hline  
 \end{tabular}
-\caption{Sample ports with their corresponding valves and pressure gauge to watch, along with whether pneumatically controlled VA's have been installed. Additionally, the section number that provides additional instructions for collecting a sample from each port has been indicated in the `Section' column. Refer to this table for valves VA, VB and VC as they depend on the location you will be collecting a sample from.}
+\caption{Sample ports with their corresponding valves and pressure gauge to watch, along with whether pneumatically controlled VA's have been installed. Additionally, if the desired port requires additional instructions, the section number that provides these instructions has been indicated in the `Sam. Draw Instructions' column. Refer to this table for valves VA, VB and VC as they depend on the location you will be collecting a sample from.}
 \label{Table1}
 \end{center}
 \end{table}
+
+This section describes the process of sampling and analyzing xenon from the LUX circulation xenon system with the sampling system. Because the sampling procedure is largely the same for each of the locations, we will henceforth refer to the valves in each sampling location as VC\&VB (valve on the circulation side) and VA (the valve on the sampling system side).  Additionally, we will refer to the pressure transducer nearest the sampling port as PT-A.  The valves and pressure transducer corresponding to each sampling location are summarized in Table \ref{Table1}.
+
+This section is to be followed regardless of which port was selected. This procedure is for sampling xenon from the LUX gas system, the SRV, the Xe storage bottles, and for calibrating the sampling system. A 0.5 L sampling volume will be filled with xenon from the selected port and for calibrating from the internal calibration bottle. The valves and pressure transducer corresponding to each sampling location are summarized in Table \ref{Table1}, along with whether additional steps are required to collect the sample. See Figure \ref{fig:ports} and Figure \ref{fig:pid} for diagrams of the coldtrap plumbing and sampling port locations. Once PreSample has been initiated by the user, the sampling system logic will perform a brief internal pump-out prior to attempting an automated sample draw. After this, the user will make sure a sample has been properly collected and then begin the analysis. When the analysis is completed, the xenon ice in the coldtrap will warm and vaporize; the user can choose to vent this xenon or to recover it to the SRV. The analysis will be performed automatically, purity values will appear in the slow control database, and the user will need to record these and several other quantities in the LUG.
 
 \begin{enumerate}
 
    \item Check the pressure of instrumentation nitrogen. PT-GC10 should be more than 70 psig and PT-GC9 should read more than 200 psig. If not than the instrumentation nitrogen supply needs to be replaced.
    \item Refer to Table \ref{Table1} for valves VA, VB, VC and the pressure gauge to monitor as they will depend on the location you will be collecting a sample from.
    \item Monitor and ensure the stability of the pressure gauge of interest (see Table \ref{Table1}). The pressure should be stable within 1 psig for one minute while the system is in a steady state. If not, contact the director of operations.
-  \item If the desired port has pneumatics installed (as noted in Table \ref{Table1}) confirm that VB and VC are locked open. If the selected port does not have pneumatics installed, confirm that VA, VB, and VC are locked closed. If VA, VB, or VC is in an unexpected state, stop and contact the director of operations. 
+  \item Check valve statuses.  If VA, VB, or VC is in an unexpected state, stop and contact the director of operations. Refer to the `Sam. Draw Instructions' column in Table \ref{Table1}:
+  \begin{itemize}
+  	\item If the desired port lists `none'  confirm that VB and VC are locked open. 
+	\item if the desired port lists a section number, confirm that VA, VB, and VC are locked closed. (Note that CV90 is pneumatic; its state will be checked in a proceeding step.)
+\end{itemize}
+				
+     \item Look in slow control, under ``Text".
+     
+     		a.  The state of both ``SAM Analysis Status" and ``SAM Wait Status" should be ``Idle". If not then the sampling system is not ready for PreSample; stop and consult section \ref{sec:Status}. 
+		
+		b. The state of ``SAM Error Status" should be ``None". If ``Error" is displayed see Section \ref{section:error}. 
+		
+		c. The valve status sensors `SAM\_Valve\_07 Status' through `SAM\_Valve\_12 Status' should all read $<1$ V. If any of these sensors read $\sim 5$ V, stop and contact director of operation.
+		
   \item Get liquid nitrogen (LN), but do not freeze the cold trap ``U''.
          
         		a. Locate the sampling system's portable dewar
@@ -312,15 +324,7 @@ Calibration Bottle & No & \ref{sec:calibrate} & SAM\_V14 & SAM\_V13 & n/a & n/a\
 		b. Don proper PPE. Safety glasses, face shield, cryo gloves. Also, wear a portable O2 monitor.
 						
 		c. Fill the dewar from the SRV vent line. Go to Section \ref{Section:3} and follow the instructions.
-			
-			
-     \item Look in slow control, under ``Text".
-     
-     		a.  The state of both ``SAM Analysis Status" and ``SAM Wait Status" should be ``Idle". If not then the sampling system is not ready for PreSample; stop and consult section \ref{sec:Status}. 
 		
-		b. The state of ``SAM Error Status" should be ``None". If ``Error" is displayed see Section \ref{section:error}. 
-		
-
    \item Go to the LUX slow control page, select `Control' in the top menu \href{http://lux.sanfordlab.org/SC_web/slow_control_set_vals.php}{LUX Slow Control}. Then select `Sampling' and hit the pencil button.
    \item \label{step:port} In the `Sampling Port Select' box select the desired sampling port.  The sampling will not start if you don't do this.  Press change. For help see figure \ref{fig:SC}.
    \item Double check that the correct port is displayed in the `Sampling Port Select' sensor. If the wrong port is selected, valves will open to the main circulation path in unprepared locations.
@@ -415,31 +419,6 @@ Calibration Bottle & No & \ref{sec:calibrate} & SAM\_V14 & SAM\_V13 & n/a & n/a\
 \item In the `Sampling System Master Control' box select ``Ready to Analyze" and then hit the `Change' button.  For help see Figure \ref{fig:SC}. Note: The SAM logic will not allow analysis to continue until this step has been completed.
 
 \end{enumerate}
-
-
-\subsection{Collecting a Xenon Sample from the Calibration-Xenon Bottle}
-\label{sec:calibrate}
-
-\begin{enumerate}
-
-\item Look in slow control, under ``Text".
-     
-     		a.  The state of ``SAM Analysis Status" should be ``PreSample Complete'', and ``SAM Wait Status" should be ``Draw Sample Now". If not then the sampling system is not ready to draw a sample; stop and consult section \ref{sec:Status}. 
-		
-		b. The state of ``SAM Error Status" should be ``None". If ``Error" is displayed see Section \ref{section:error}. 
-	
-  \item Minimize the regulator of the calibration bottle, SAM-R1, by twisting the handle counter clockwise until it stops.
-  \item Open the valve on the calibration bottle. Open SAM-V7 and SAM-V8 then increase the regulator SAM-R1(by twisting the knob clockwise) to fill the 0.5 L sample volume with 700 Torr of calibration xenon. Use PT-SAM2 to monitor the pressure at the output of the regulator. Figure \ref{fig:CM} shows the location of PT-SAM2's display.
-  \item Close the valve on the calibration bottle. Close SAM-V13 and SAM-14  and minimize SAM-R1(by twisting the handle counter clockwise until it stops).
-  \item Go to the LUX slow control page, select `Control' in the top menu \href{http://lux.sanfordlab.org/SC_web/slow_control_set_vals.php}{LUX Slow Control}. Then select `Sampling' and hit the pencil button.
-\item In the `Sampling System Master Control' box select ``Ready to Analyze" and then hit the `Change' button.  For help see Figure \ref{fig:SC}. Note: The SAM logic will not allow analysis to continue until this step has been completed.
-            \item After the calibration is complete the results will be written to the Slow Control data base. Add the purity values returned for Cal\_N2, Cal\_O2, Cal\_He, Cal\_Ar, Cal\_Kr, Cal\_Kr86, Cal\_CH4 into the LUG entry that was started.
-  
-
-
-            
-\end{enumerate}
-
 
 \subsection{Collecting a Xenon Sample from the Xenon Storage Bottles}
 \label{sec:bottles}
@@ -611,10 +590,27 @@ This procedure is for collecting a xenon sample from the LUX SRV. A 0.5 L sampli
               
 \end{enumerate}
 
+\subsection{Collecting a Xenon Sample from the Calibration-Xenon Bottle}
+\label{sec:calibrate}
 
+\begin{enumerate}
 
+\item Look in slow control, under ``Text".
+     
+     		a.  The state of ``SAM Analysis Status" should be ``PreSample Complete'', and ``SAM Wait Status" should be ``Draw Sample Now". If not then the sampling system is not ready to draw a sample; stop and consult section \ref{sec:Status}. 
+		
+		b. The state of ``SAM Error Status" should be ``None". If ``Error" is displayed see Section \ref{section:error}. 
 	
-\subsection{Recovering Sampled Xenon to the SRV}
+  \item Minimize the regulator of the calibration bottle, SAM-R1, by twisting the handle counter clockwise until it stops.
+  \item Open the valve on the calibration bottle. Open SAM-V7 and SAM-V8 then increase the regulator SAM-R1(by twisting the knob clockwise) to fill the 0.5 L sample volume with 700 Torr of calibration xenon. Use PT-SAM2 to monitor the pressure at the output of the regulator. Figure \ref{fig:CM} shows the location of PT-SAM2's display.
+  \item Close the valve on the calibration bottle. Close SAM-V13 and SAM-14  and minimize SAM-R1(by twisting the handle counter clockwise until it stops).
+  \item Go to the LUX slow control page, select `Control' in the top menu \href{http://lux.sanfordlab.org/SC_web/slow_control_set_vals.php}{LUX Slow Control}. Then select `Sampling' and hit the pencil button.
+\item In the `Sampling System Master Control' box select ``Ready to Analyze" and then hit the `Change' button.  For help see Figure \ref{fig:SC}. Note: The SAM logic will not allow analysis to continue until this step has been completed.
+            \item After the calibration is complete the results will be written to the Slow Control data base. Add the purity values returned for Cal\_N2, Cal\_O2, Cal\_He, Cal\_Ar, Cal\_Kr, Cal\_Kr86, Cal\_CH4 into the LUG entry that was started.
+            
+\end{enumerate}
+	
+\subsection{Recovering Sampled Xenon to the SRV (when not sampling from bottles)}
 \label{sec:SRV_Rec}
 \begin{safe}
 Cryogen and pressure hazards mitigated as noted in Section 2.4
