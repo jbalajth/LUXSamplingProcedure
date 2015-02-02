@@ -12,41 +12,42 @@
 \contentsline {subsection}{\numberline {4.2}Collecting a Xenon Sample from the Xenon Storage Bottles}{14}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Collecting a Xenon Sample from the SRV (when warm)}{17}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Collecting a Xenon Sample from the Calibration-Xenon Bottle}{18}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Recovering Sampled Xenon to the SRV (when not sampling from bottles)}{19}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Recovering Sampled Xenon to the SRV when Sampling From the Xenon Storage Bottles}{20}{subsection.4.6}
-\contentsline {section}{\numberline {5}Understanding SAM Status Readouts}{21}{section.5}
-\contentsline {subsection}{\numberline {5.1}Idle:Idle}{21}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Presample:Wait}{22}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Analyzing:Wait}{22}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Calibrating:Wait}{22}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Pumpout:Wait}{22}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}SRV Recovery:Wait}{22}{subsection.5.6}
-\contentsline {subsection}{\numberline {5.7}Waiting:Prep to Draw}{22}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}PreSample Complete:Begin Analysis}{22}{subsection.5.8}
-\contentsline {subsection}{\numberline {5.9}Analysis Complete:Prepare for Recovery}{22}{subsection.5.9}
-\contentsline {subsection}{\numberline {5.10}Idle:Begin Pumpout}{22}{subsection.5.10}
-\contentsline {subsection}{\numberline {5.11}Waiting:RaiseLN}{22}{subsection.5.11}
-\contentsline {subsection}{\numberline {5.12}Waiting:DropLN}{22}{subsection.5.12}
-\contentsline {subsection}{\numberline {5.13}Waiting:OpenCV89}{23}{subsection.5.13}
-\contentsline {section}{\numberline {6}Debugging Sampling System Errors}{23}{section.6}
-\contentsline {subsection}{\numberline {6.1} Poor Vacuum}{23}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2} Xenon is too dirty}{23}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3} No Pressure Drop}{24}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4} Valve Failure}{24}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5} Low Sample Pressure}{24}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Low LN}{25}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}PumpOutErr}{25}{subsection.6.7}
-\contentsline {subsection}{\numberline {6.8}NetErr}{25}{subsection.6.8}
-\contentsline {section}{\numberline {A}Sampling System Logic}{26}{appendix.A}
-\contentsline {subsection}{\numberline {A.1}Sampling System Control: Error}{26}{subsection.A.1}
-\contentsline {subsection}{\numberline {A.2} Sampling System Control: Idle}{26}{subsection.A.2}
-\contentsline {subsection}{\numberline {A.3} Sampling System Control: PreSample}{26}{subsection.A.3}
-\contentsline {subsection}{\numberline {A.4}Sampling System Control: Analyze\&Dump/Analyze\&Recover/Calibrate}{27}{subsection.A.4}
-\contentsline {subsection}{\numberline {A.5} Sampling System Control: Pump Out}{29}{subsection.A.5}
-\contentsline {subsection}{\numberline {A.6} Sampling System Control: Recover}{30}{subsection.A.6}
-\contentsline {section}{\numberline {B}How to Analyze the Data}{30}{appendix.B}
-\contentsline {subsection}{\numberline {B.1}Overview}{30}{subsection.B.1}
-\contentsline {subsection}{\numberline {B.2}Measuring the dynamic leak rate}{30}{subsection.B.2}
-\contentsline {subsection}{\numberline {B.3}Accounting for the dynamic leak rate}{31}{subsection.B.3}
-\contentsline {subsection}{\numberline {B.4}Peak pressure method}{31}{subsection.B.4}
-\contentsline {section}{\numberline {C}Figures}{32}{appendix.C}
+\contentsline {subsection}{\numberline {4.5}Collecting a Xenon Sample the pump space while circulating}{19}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Recovering Sampled Xenon to the SRV (when not sampling from bottles)}{20}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Recovering Sampled Xenon to the SRV when Sampling From the Xenon Storage Bottles}{21}{subsection.4.7}
+\contentsline {section}{\numberline {5}Understanding SAM Status Readouts}{22}{section.5}
+\contentsline {subsection}{\numberline {5.1}Idle:Idle}{22}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Presample:Wait}{23}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Analyzing:Wait}{23}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Calibrating:Wait}{23}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Pumpout:Wait}{23}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}SRV Recovery:Wait}{23}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Waiting:Prep to Draw}{23}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}PreSample Complete:Begin Analysis}{23}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.9}Analysis Complete:Prepare for Recovery}{23}{subsection.5.9}
+\contentsline {subsection}{\numberline {5.10}Idle:Begin Pumpout}{23}{subsection.5.10}
+\contentsline {subsection}{\numberline {5.11}Waiting:RaiseLN}{23}{subsection.5.11}
+\contentsline {subsection}{\numberline {5.12}Waiting:DropLN}{23}{subsection.5.12}
+\contentsline {subsection}{\numberline {5.13}Waiting:OpenCV89}{24}{subsection.5.13}
+\contentsline {section}{\numberline {6}Debugging Sampling System Errors}{24}{section.6}
+\contentsline {subsection}{\numberline {6.1} Poor Vacuum}{24}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2} Xenon is too dirty}{24}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3} No Pressure Drop}{25}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4} Valve Failure}{25}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5} Low Sample Pressure}{25}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Low LN}{26}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}PumpOutErr}{26}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}NetErr}{26}{subsection.6.8}
+\contentsline {section}{\numberline {A}Sampling System Logic}{27}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Sampling System Control: Error}{27}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2} Sampling System Control: Idle}{27}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3} Sampling System Control: PreSample}{27}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}Sampling System Control: Analyze\&Dump/Analyze\&Recover/Calibrate}{28}{subsection.A.4}
+\contentsline {subsection}{\numberline {A.5} Sampling System Control: Pump Out}{31}{subsection.A.5}
+\contentsline {subsection}{\numberline {A.6} Sampling System Control: Recover}{31}{subsection.A.6}
+\contentsline {section}{\numberline {B}How to Analyze the Data}{32}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Overview}{32}{subsection.B.1}
+\contentsline {subsection}{\numberline {B.2}Measuring the dynamic leak rate}{32}{subsection.B.2}
+\contentsline {subsection}{\numberline {B.3}Accounting for the dynamic leak rate}{32}{subsection.B.3}
+\contentsline {subsection}{\numberline {B.4}Peak pressure method}{33}{subsection.B.4}
+\contentsline {section}{\numberline {C}Figures}{34}{appendix.C}

@@ -693,6 +693,54 @@ This procedure is for collecting a xenon sample from the LUX SRV. A 0.5 L sampli
 \item Once the ``Analysis''/``Wait'' statuses no longer read ``Waiting''/``Draw Sample Now'', return to step \ref{step:presamdone} in section \ref{sec:main}.
             
 \end{enumerate}
+
+\subsection{Collecting a Xenon Sample the pump space while circulating}
+\label{sec:pump}
+
+
+\begin{enumerate}
+
+\item Look in slow control, under ``Text".
+     
+     		a.  The state of ``SAM Analysis Status" should be ``Waiting'', and ``SAM Wait Status" should be ``Prep to Draw". If not then the sampling system is not ready to draw a sample; stop and consult section \ref{sec:Status}. 
+		
+		b. The state of ``SAM Error Status" should be ``None". If ``Error" is displayed see Section \ref{section:error}. 
+		
+\item Monitor and ensure the stability of PT-C40. The pressure should be stable within 1 psig for one minute while the system is in a steady state. If not, contact the director of operations.
+\item Confirm that CV60 and CV61 are locked closed. If either is open, stop and contact the director of operations. 
+\item Confirm that CV55, CV56, CV57, CV58, and CV59 are closed.
+
+\item If sampling from pump 1.
+ \begin{enumerate}
+ \item Confirm Pump 1 is off. If not, stop and contact director of operations.
+ \item Confirm that CV15, CV19, CV20, CV16, CV13, CV14, CV29, and CV28 are all closed.
+ \item Confirm that CV27, CV12, and CV26 are open.
+ \item Open CV19, CV20, CV56, and CV57.
+\end{enumerate}
+
+\item If sampling from pump 2.
+ \begin{enumerate}
+ \item Confirm pump 2 is off. If not, stop and contact director of operations.
+ \item Confirm that CV16, CV22, CV27, CV17, CV13, CV14, CV21, and CV17 are all closed.
+ \item Confirm that CV29, CV12, and CV28 are open.
+ \item Open CV22, CV21, CV58, and CV59.
+\end{enumerate}
+
+\item The following step should not be performed until the user is in Lower Davis and is prepared to actuate VA, VB, and VC.
+\item In slow control, under ``Control'', press the ``Ready'' button in the ``Sample Draw Ready Status'' sensor.  
+\item The ``Analysis''/``Wait'' statuses will change to ``PreSample''/``Wait'' while the sampling valves are configured to allow the sample to be drawn.
+\item in less than 1 minute, the ``Analysis''/``Wait'' statuses will change to ``Waiting''/``Draw Sample Now''. At this point the user has 5 minutes to collect the sample.
+\item Open CV60 and CV61.
+\item Once PT\_SAM2 levels off, close CV60 and CV61.
+\item Place an administrative locks on CV60 and CV61 and tag them.
+
+\item If sampling from pump 1, close CV19, CV20, CV56, and CV57.
+\item If sampling from pump 2, close CV22, CV21, CV58, and CV59.
+
+\item Once the ``Analysis''/``Wait'' statuses no longer read ``Waiting''/``Draw Sample Now'', return to step \ref{step:presamdone} in section \ref{sec:main}.
+
+\end{enumerate}
+
 	
 \subsection{Recovering Sampled Xenon to the SRV (when not sampling from bottles)}
 \label{sec:SRV_Rec}
@@ -942,9 +990,14 @@ When this value is selected the sampling system logic does nothing.
 \item NewSetValue=1;
 \item Check if port is selected and SAM\_P\_Min is between 100 and 2000. If not then print Error: no port selected.
 \item Check RGA filament is on. If not turn it on.
+\item Start analog scan every 240 seconds
 \item Check N2PP,O2PP and PT-SAM1 $<$ 1e-7 and timestamp is $<$ 5min. If not then Error-poor vacuum.
-\item Close all valves. Open SAM V7. Check status. If valve status not confirmed then Error-valve failure.
+\item If SAM\_tot\_pres $>$ 0, TC\_1:2 $<$ 80 K, and TC\_3 $<$ 130 K, ice\_in\_trap = 1
+\item Else ice\_in\_trap = 0
 
+\item If ice\_in\_trap = 0, run pumpout
+\item Else:
+\begin{enumerate}
 \item Check SAM CM gauge reads $<$10 torr. If not Error: pumpout error.
 \item Turn off CCG 2 to protect it and make sure Turbo 2 is spun up.
 \item  Open SAM V1 and V2 to conduct brief pumpout.
@@ -954,10 +1007,19 @@ When this value is selected the sampling system logic does nothing.
 
 \item Close V7 and open V3, then sleep 60 seconds while pressure levels off.
 \item Check N2PP,O2PP and PT-SAM1 $<$ 1e-7 and timestamp is $<$ 5min. If not then Error-poor vacuum.
+\end{enumerate}
 \item Close all SAM valves.
-\item Choose which valve if any to open to draw sample (call this the sample-valve).
+\item If sample port is capable of automatic sampling:
+\begin{enumerate}
 \item Open V7.
 \item If sample port allows for automatic sampling, cycle open/closed sample-valve until SAM CM gauge $>$ SAM\_P\_Min, up to maximum 6 tries.
+\end{enumerate}
+\item Else:
+\begin{enumerate}
+\item Wait for user to press ``Ready to Sample''
+\item Open V7, display ``Draw Sample Now'', and wait 5 minutes for user to draw sample
+\end{enumerate}
+
 \item Close all SAM valves.
 \item Display ``RaiseLN" in SAM\_wait until SAM TC1 and TC2 read $<$ 80 Kelvin.
 
@@ -1017,6 +1079,10 @@ Note: the option of ``Calibrate" is identical to ``Analyze\&Dump", except purity
 \item Run Function to write purity values to a table. Either a Calibration(new\_set\_val==4) or Sample Analysis(new\_set\_val==2||3). // First calculate the background subtracted leak rate normalized values then divide by the latest calibration.
 
 \item Begin Clean Up. 
+\item Close V3
+\item Open V2
+\item Allow remaining gas to be frozen into the cold trap through V13
+\item If user select ``Draw'' as the post analysis action, display ``Analysis Complete'' and ``Prep to Draw'' and return(0). 
 \item Check TC1 \& TC2 $>$ 260 K //LN has evaporated? If not then wait. The value of ``Sampling System Status" will change to ``DropLN" and will remain there until the cold trap has sufficiently warmed.
 \item Check V1, V2, V3, V4, V5, V6 are closed. If not then close.
 \item Open V4, V5, V6 and Check status.  If not then Error-valve failure.
@@ -1042,7 +1108,7 @@ Note: the option of ``Calibrate" is identical to ``Analyze\&Dump", except purity
 \item NewSetValue=5;
 \item Check TC1 \& TC2 $>$ 260 K //LN has evaporated? If not then wait. The value of ``Sampling System Status" will change to ``DropLN" and will remain there until the cold trap has sufficiently warmed.
 \item Check all SAM valves are closed. If not then close.
-\item Open V1, V4, V5, V6, V7 and Check status.  If not then Error-valve failure.
+\item Open V13, V4, V5, V6, V7 and Check status.  If not then Error-valve failure.
 \item Check that SAM Turbo Pump 2 is off (if not, turn off and wait 10 min)
 \item Check V3 is closed
 \item Open V2, Check status // This will begin to evacuate the coldtrap and sampling volume
@@ -1062,7 +1128,7 @@ Note: the option of ``Calibrate" is identical to ``Analyze\&Dump", except purity
 \item Check TC1 $>$ 270 K //LN has evaporated? If not then wait. The value of ``Sampling System Status" will change to ``DropLN" and will remain there until the cold trap has sufficiently warmed.
 \item Check that there is sufficient pressure to recover ($>$ 20 torr). If not, do nothing.
 \item Close all SAM valves.
-\item Open V1, V4, V5, V6, V7, \& V9
+\item Open V13, V4, V5, V6, V7, \& V9
 \item Display ``Open CV89" until PT\_SAM2 reads $<$ 20 torr for up to 15 minutes. If pressure does not reach <20 torr in this time, Error: No Pressure Drop.
 \item Close all SAM vales
 \item If Okay, display ``Begin Pumpout" in SAM\_wait and ``Idle" in Analysis\_status.
