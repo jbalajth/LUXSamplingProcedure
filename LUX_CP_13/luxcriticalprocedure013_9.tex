@@ -115,7 +115,8 @@ Revision & Description & Author(s) \& Date \\
 7&Xe SB sampling update & Attila Dobi 3/26/14  \\
 \hline
 8&SAM automation upgrade & Jon Balajthy 5/14/14 \\
- & & \\
+\hline
+9&Hardware upgrade and Calibration & Jon Balajthy 1/1/15 \\
 \hline
  & & \\
 \hline
@@ -304,7 +305,7 @@ This section is to be followed regardless of which port was selected. This proce
    
    \item Look in slow control, under ``Text" in then ``Sampling'' heading.
      	\begin{enumerate}
-	\item The state of both ``SAM Analysis Status" and ``SAM Wait Status" should be ``Idle". If not then the sampling system is not ready for PreSample; stop and consult section \ref{sec:Status}. 
+	\item The state of ``SAM Analysis Status" should be ``Idle" and ``SAM Wait Status" should be either ``Idle'' or ``Begin Pumpout or Draw''. If not then the sampling system is not ready for PreSample; stop and consult section \ref{sec:Status}. 
 	\item The state of ``SAM Error Status" should be ``None". If ``Error" is displayed see Section \ref{section:error}. 
 	\item The valve status sensors `SAM\_Valve\_07 Status' through `SAM\_Valve\_12 Status' should all read $<1$ V. If any of these sensors read $\sim 5$ V, stop and contact director of operation.
 	\end{enumerate}
@@ -339,8 +340,12 @@ This section is to be followed regardless of which port was selected. This proce
 	\end{itemize}
 	Note: CV9, CV11, CV37, CV78, and CV90 are pneumatic; these states will be checked in a proceeding step.
 	
+	
 \end{enumerate}
-		
+
+  \item Ensure that SAM\_V15 and the valve on the Calibration supply bottle are both closed. 
+  \item Ensure that the pressure gauges on SAM\_R1 both indicate vacuum. If not, stop and contact system owner.
+  		
   \item Fill the large white liquid nitrogen (LN) Dewar, but do not freeze the cold trap ``U''.
          
         		a. Locate the sampling system's portable dewar
@@ -356,6 +361,13 @@ This section is to be followed regardless of which port was selected. This proce
    \item Make sure that the number displayed in `Sampling Pressure Minimum' is the desired sample pressure in torr. 700 is the most typical value, but for higher sensitivity a pressure up to 1600 torr can be selected. 
 
    \item It is important to ensure that SAM\_tot\_pressure + 0.5*SAM\_P\_Min < 2000 torr. If not, readjust SAM\_P\_Min.
+   
+   \item If the user is calibrating, the follow steps must be taken prior to pressing `PreSample'.
+   \begin{itemize}
+   \item Ensure that the valve on the calibration bottle is closed.
+   \item Open SAM\_V15.
+   \item Maximize SAM\_R1 while watching that PT\_SAM2 does not go above 1800 torr.
+   \end{itemize}
    
    \item In the `Sampling System Master Control' box select `Pre Sample' and then hit the `Change' button. This will automatically prepare the system for analysis. While the pre-sample program is running the ``SAM Wait Status'' will display ``Wait''. The ``SAM Analysis Status'' will read either ``PreSample'' or ``Pumpout'' depending on if there were previous samples drawn. Do not change anything on the control page at this time, it could result in an error. For help see figure \ref{fig:SC}.
    
@@ -428,9 +440,15 @@ This section is to be followed regardless of which port was selected. This proce
     
     \item After analysis, the sampling system will allow the remaining xenon to be frozen into the cold trap, and will then decide how to proceed depending on which post analysis action was chosen in step \ref{step:beginanalyze}
     
-    \item If user selected ?Draw? in step ref{step:beginanalyze}:
+  \item After the analysis is complete the purity results will be written to the Slow Control data base. 
+  \begin{itemize}
+  \item If a calibration was performed,  copy and paste values returned for Cal\_N2, Cal\_O2, Cal\_He, Cal\_Ar, Cal\_Kr, Cal\_Kr86, Cal\_CH4 into the LUG entry that was started.
+  \item Otherwise, copy and paste the purity values returned for N2, O2, He, Ar, Kr, Kr86, CH4 into the LUG entry that was started. If the sample was taken from the storage bottles, also update these values in the Xe-inventory google-doc.
+  \end{itemize}
+    
+    \item If user selected `Draw' in step ref{step:beginanalyze}:
     	\begin{enumerate}
-	\item Once analysis completes, SAM will check that ?SAM tot pressure? is less than 1200 torr. If not, it will go to step ref{step:nodraw} and perform the actions as if user had chosen ?Recover? in step 16.
+	\item Once analysis completes, SAM will check that `SAM tot pressure' is less than 1200 torr. If not, it will go to step ref{step:nodraw} and perform the actions as if user had chosen `Recover' in step 16.
 	\item Analysis/wait statuses will change to ``Analysis Complete''/``Prep to Draw''.
 	\item User should now check that SAM TC3 is reading less than 85 Kelvin, and add LN if not.
 	\item Return to step 1.
@@ -438,9 +456,19 @@ This section is to be followed regardless of which port was selected. This proce
    
    \item \label{step:nodraw} If user did not select `Draw' in step ref{step:beginanalyze}, the analysis/wait statuses will change to ``Waiting''/``DropLN'' until the cold-trap has reached room temperature. At this time, the user can either lower the lab-jack supporting the LN or allow the LN to evaporate (the latter takes 5-12 hours, depending on how full the cooler is).
    
-   \item If the user chose ``Dump'' in the post analysis or ``Calibrate'', once the cold-trap is warm the xenon will be pumped out automatically and the sampling system will prep for the next measurement. No Further steps are required by the user.
+   \item If the user chose ``Dump'' in the post analysis, once the cold-trap is warm the xenon will be pumped out automatically and the sampling system will prep for the next measurement. No Further steps are required by the user.
    
    \item If the user chose ``Recover" then once the cold trap warms up, SAM will display ``Analysis Complete" in the analysis status and ``Prepare for Recovery" in the wait status and will wait until the user begins recovery of the xenon to the SRV.
+   
+   \item If a calibration was performed, once the cold trap warms up, SAM will display ``Analysis Complete" in the analysis status and ``Begin Pumpout" in the wait status. At this point: 
+   \begin{itemize}
+   \item Ensure that the valve on the calibration bottle is closed.
+   \item Open SAM\_V15.
+   \item Maximize SAM\_R1 while watching that PT\_SAM2 does not go above 1800 torr.
+   \item Go to the ``Control'' page, select ``Pump Out" in``Sampling System Master Control", and hit change.
+   \item once the SAM statuses both read `Idle', close SAM\_V15 and minimize SAM\_R1. 
+   \end{itemize}
+   
    
   \item At this point, if the user wishes to recover the xenon to the SRV then go to section:
   \begin{itemize}
@@ -451,12 +479,6 @@ This section is to be followed regardless of which port was selected. This proce
   \item If the user does not wish to recover the xenon, select ``Pump Out" in``Sampling System Master Control" and hit change. This will evacuate the remaining xenon remaining in the sampling system in preparation for the next sample. The value of ``Sampling System Status" will change to ``Pumping Out" while the remaining xenon vents, and then to ``Idle" once the process is complete.
   
   \item The user must wait until both the ``SAM Analysis Status" and ``SAM Wait Status" change to idle before collecting another sample. 
-  \item After the analysis is complete the purity results will be written to the Slow Control data base. 
-  
-  \begin{itemize}
-  \item If a calibration was performed,  copy and paste values returned for Cal\_N2, Cal\_O2, Cal\_He, Cal\_Ar, Cal\_Kr, Cal\_Kr86, Cal\_CH4 into the LUG entry that was started.
-  \item Otherwise, copy and paste the purity values returned for N2, O2, He, Ar, Kr, Kr86, CH4 into the LUG entry that was started. If the sample was taken from the storage bottles, also update these values in the Xe-inventory google-doc.
-  \end{itemize}
   
 \end{enumerate}
 
@@ -681,15 +703,19 @@ This procedure is for collecting a xenon sample from the LUX SRV. A 0.5 L sampli
 		b. The state of ``SAM Error Status" should be ``None". If ``Error" is displayed see Section \ref{section:error}. 
 		
 \item Monitor and ensure the stability of the pressure gauge of interest (see Table \ref{Table1}). The pressure should be stable within 1 psig for one minute while the system is in a steady state. If not, contact the director of operations.
-\item Confirm that VA, VB, and VC are locked . If VA, VB, or VC is open, stop and contact the director of operations. 
-\item The following step should not be performed until the user is in Lower Davis and is prepared to actuate VA, VB, and VC.
+\item Ensure that SAM\_V8-12 all indicate closed in slow control. If not, stop and contact system owner.
+\item Ensure than SAM\_V15 is open.
+\item Minimize SAM\_R1.
+
+\item The following step should not be performed until the user is in Lower Davis.
 \item In slow control, under ``Control'', press the ``Ready'' button in the ``Sample Draw Ready Status'' sensor.  
+
 \item The ``Analysis''/``Wait'' statuses will change to ``PreSample''/``Wait'' while the sampling valves are configured to allow the sample to be drawn.
 \item in less than 1 minute, the ``Analysis''/``Wait'' statuses will change to ``Waiting''/``Draw Sample Now''. At this point the user has 5 minutes to collect the sample.
 
-  \item Minimize the regulator of the calibration bottle, SAM-R1, by twisting the handle counter clockwise until it stops.
-  \item Open the valve on the calibration bottle. Open SAM-V7 and SAM-V8 then increase the regulator SAM-R1(by twisting the knob clockwise) to fill the 0.5 L sample volume with 700 Torr of calibration xenon. Use PT-SAM2 to monitor the pressure at the output of the regulator. Figure \ref{fig:CM} shows the location of PT-SAM2's display.
-  \item Close the valve on the calibration bottle. Close SAM-V13 and SAM-14  and minimize SAM-R1(by twisting the handle counter clockwise until it stops).
+  \item Open the valve on the calibration bottle. 
+  \item Increase the regulator SAM-R1(by twisting the knob clockwise) to fill the 0.5 L sample volume with 700 Torr of calibration xenon. Use PT-SAM2 to monitor the pressure at the output of the regulator. Figure \ref{fig:CM} shows the location of PT-SAM2's display.
+  \item Close the valve on the calibration bottle. Close SAM-V15  and minimize SAM-R1(by twisting the handle counter clockwise until it stops).
 \item Once the ``Analysis''/``Wait'' statuses no longer read ``Waiting''/``Draw Sample Now'', return to step \ref{step:presamdone} in section \ref{sec:main}.
             
 \end{enumerate}
@@ -811,7 +837,10 @@ Cryogen and pressure hazards mitigated as noted in Section 2.4
 
 \item Once the SAM CM gauge reads $<$20 torr, the SAM logic will close the sampling system valves, `SAM Analysis Status' will read `Idle', and `SAM Wait Status' will read `Begin Pumpout'. It is now safe to continue to the next step.
 \item Close CV89, SV11, SV32, SV33, SV45, SV44, SV10, SV15, SV30, SV9, SV2.
-\item \label{pump_out} In ``Sampling System Master Control" select ``Pump Out" and hit change. This will evacuate the remaining xenon remaining in the sampling system in preparation for the next sample.
+\item \label{pump_out} In ``Sampling System Master Control":
+\begin{itemize} 
+\item If user wants to draw the next sample immediately, return to step 1 of section \ref{sec:main}.
+\item Otherwise, select ``Pump Out" and hit change. This will evacuate the remaining xenon remaining in the sampling system in preparation for the next sample.
 \item The value of ``Sampling System Status" will change to ``Pumping Out" while the remaining xenon vents, and then to ``Idle" once the process is complete.
 
 
@@ -849,8 +878,8 @@ In this state, the user should not do anything to the system. SAM logic will con
 \subsection{Analysis Complete:Prepare for Recovery} 
  Analysis has completed successfully. User should prepare SRV plumbing for recovery according to section \ref{sec:SRV_Rec}.
  
- \subsection{Idle:Begin Pumpout}
- SRV recovery has been completed successfully, user should now initiate pump-out by selecting ``Pumpout" in the ``Sampling System Master Control" sensor in the slow control ``control" tab.
+ \subsection{Idle:Begin Pumpout or Draw}
+ SRV recovery has been completed successfully, user should now initiate pump-out by selecting ``Pumpout" in the ``Sampling System Master Control" sensor in the slow control ``control" tab. The user is also able to begin Presample from this state if desired.
  
 \subsection{Waiting:RaiseLN}
  User must freeze cold trap before logic will continue.
